@@ -38,3 +38,6 @@ endif()
 if(CMAKE_BUILD_TYPE STREQUAL Release)
   add_compile_options(-Ofast)
 endif()
+
+add_executable(main src/foo.cpp)
+target_include_directories(main PRIVATE ${CMAKE_SOURCE_DIR}/includes)
